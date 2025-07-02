@@ -1,0 +1,98 @@
+*markdown-indent.txt*    Intelligent markdown header indentation for Neovim
+
+==============================================================================
+CONTENTS                                            *markdown-indent-contents*
+
+    1. Introduction ................ |markdown-indent-introduction|
+    2. Installation ................ |markdown-indent-installation|
+    3. Usage ....................... |markdown-indent-usage|
+    4. Configuration ............... |markdown-indent-configuration|
+    5. Functions ................... |markdown-indent-functions|
+    6. License ..................... |markdown-indent-license|
+
+==============================================================================
+INTRODUCTION                                    *markdown-indent-introduction*
+
+markdown-indent.nvim is a Neovim plugin that provides intelligent indentation
+for markdown headers. It allows you to easily increase or decrease header
+levels using Tab and Shift-Tab, with optional support for indenting
+subheadings along with their parent headers.
+
+==============================================================================
+INSTALLATION                                    *markdown-indent-installation*
+
+Install using your preferred plugin manager and call the setup function:
+
+    require('markdown-indent').setup()
+
+The plugin will automatically activate for markdown files.
+
+==============================================================================
+USAGE                                                  *markdown-indent-usage*
+
+Once installed, the following keybindings are available in markdown files:
+
+    <Tab>       Indent current header (increase level by adding #)
+    <S-Tab>     Unindent current header (decrease level by removing #)
+
+The plugin can optionally indent/unindent subheadings along with the current
+header based on the configuration.
+
+==============================================================================
+CONFIGURATION                                  *markdown-indent-configuration*
+
+Configure the plugin by passing options to the setup function:
+
+    require('markdown-indent').setup({
+        keymaps = {
+            indent = "<Tab>",
+            unindent = "<S-Tab>",
+        },
+        max_header_level = 6,
+        filetypes = { "markdown", "md" },
+        include_subheadings = true,
+        fallback_behavior = "indent",
+    })
+
+Configuration Options:~
+
+    keymaps.indent          Key binding for indenting headers
+                            Default: "<Tab>"
+
+    keymaps.unindent        Key binding for unindenting headers
+                            Default: "<S-Tab>"
+
+    max_header_level        Maximum header level (1-6)
+                            Default: 6
+
+    filetypes               File types to activate on
+                            Default: { "markdown", "md" }
+
+    include_subheadings     Whether to indent subheadings with parent headers
+                            Default: true
+
+    fallback_behavior       Behavior when not on a header line
+                            Options: "indent", "tab", "none"
+                            Default: "indent"
+
+==============================================================================
+FUNCTIONS                                          *markdown-indent-functions*
+
+markdown-indent.setup({config})                     *markdown-indent.setup()*
+    Setup the plugin with the given configuration.
+
+    Parameters: ~
+        {config}    (table) Configuration options
+
+markdown-indent.indent()                            *markdown-indent.indent()*
+    Indent the current header and optionally its subheadings.
+
+markdown-indent.unindent()                        *markdown-indent.unindent()*
+    Unindent the current header and optionally its subheadings.
+
+==============================================================================
+LICENSE                                              *markdown-indent-license*
+
+MIT License
+
+vim:tw=78:ts=8:ft=help:norl:
