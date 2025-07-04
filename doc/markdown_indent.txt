@@ -1,34 +1,34 @@
-*markdown-indent.txt*    Intelligent markdown header indentation for Neovim
+*markdown_indent.txt*    Intelligent markdown header indentation for Neovim
 
 ==============================================================================
-CONTENTS                                            *markdown-indent-contents*
+CONTENTS                                            *markdown_indent-contents*
 
-    1. Introduction ................ |markdown-indent-introduction|
-    2. Installation ................ |markdown-indent-installation|
-    3. Usage ....................... |markdown-indent-usage|
-    4. Configuration ............... |markdown-indent-configuration|
-    5. Functions ................... |markdown-indent-functions|
-    6. License ..................... |markdown-indent-license|
+    1. Introduction ................ |markdown_indent-introduction|
+    2. Installation ................ |markdown_indent-installation|
+    3. Usage ....................... |markdown_indent-usage|
+    4. Configuration ............... |markdown_indent-configuration|
+    5. Functions ................... |markdown_indent-functions|
+    6. License ..................... |markdown_indent-license|
 
 ==============================================================================
-INTRODUCTION                                    *markdown-indent-introduction*
+INTRODUCTION                                    *markdown_indent-introduction*
 
-markdown-indent.nvim is a Neovim plugin that provides intelligent indentation
+markdown_indent.nvim is a Neovim plugin that provides intelligent indentation
 for markdown headers. It allows you to easily increase or decrease header
 levels using Tab and Shift-Tab, with optional support for indenting
 subheadings along with their parent headers.
 
 ==============================================================================
-INSTALLATION                                    *markdown-indent-installation*
+INSTALLATION                                    *markdown_indent-installation*
 
 Install using your preferred plugin manager and call the setup function:
 
-    require('markdown-indent').setup()
+    require('markdown_indent').setup()
 
 The plugin will automatically activate for markdown files.
 
 ==============================================================================
-USAGE                                                  *markdown-indent-usage*
+USAGE                                                  *markdown_indent-usage*
 
 Once installed, the following keybindings are available in markdown files:
 
@@ -39,11 +39,11 @@ The plugin can optionally indent/unindent subheadings along with the current
 header based on the configuration.
 
 ==============================================================================
-CONFIGURATION                                  *markdown-indent-configuration*
+CONFIGURATION                                  *markdown_indent-configuration*
 
 Configure the plugin by passing options to the setup function:
 
-    require('markdown-indent').setup({
+    require('markdown_indent').setup({
         keymaps = {
             indent = "<Tab>",
             unindent = "<S-Tab>",
@@ -76,22 +76,22 @@ Configuration Options:~
                             Default: "indent"
 
 ==============================================================================
-FUNCTIONS                                          *markdown-indent-functions*
+FUNCTIONS                                          *markdown_indent-functions*
 
-markdown-indent.setup({config})                     *markdown-indent.setup()*
+markdown_indent.setup({config})                     *markdown_indent.setup()*
     Setup the plugin with the given configuration.
 
     Parameters: ~
         {config}    (table) Configuration options
 
-markdown-indent.indent()                            *markdown-indent.indent()*
+markdown_indent.indent()                            *markdown_indent.indent()*
     Indent the current header and optionally its subheadings.
 
-markdown-indent.unindent()                        *markdown-indent.unindent()*
+markdown_indent.unindent()                        *markdown_indent.unindent()*
     Unindent the current header and optionally its subheadings.
 
 ==============================================================================
-LICENSE                                              *markdown-indent-license*
+LICENSE                                              *markdown_indent-license*
 
 MIT License
 

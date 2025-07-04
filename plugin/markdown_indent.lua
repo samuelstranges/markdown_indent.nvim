@@ -8,8 +8,8 @@ vim.api.nvim_create_user_command('MarkdownIndentSetup', function(opts)
   if opts.args and opts.args ~= '' then
     config = vim.fn.json_decode(opts.args)
   end
-  require('markdown-indent').setup(config)
+  require('markdown_indent').setup(config)
 end, {
   nargs = '?',
-  desc = 'Setup markdown-indent plugin with optional config'
+  desc = 'Setup markdown_indent plugin with optional config'
 })

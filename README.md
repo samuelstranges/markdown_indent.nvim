@@ -1,4 +1,4 @@
-# markdown-indent.nvim
+# markdown_indent.nvim
 
 A Neovim plugin for intelligent markdown header indentation. Allows you to
 easily indent/unindent markdown headers and their subheadings using
@@ -20,10 +20,10 @@ Tab/Shift-Tab.
 
 ```lua
 {
-  'samuelstranges/markdown-indent.nvim',
+  'samuelstranges/markdown_indent.nvim',
   ft = { 'markdown' },
   config = function()
-    require('markdown-indent').setup()
+    require('markdown_indent').setup()
   end,
 }
 ```
@@ -38,7 +38,7 @@ Once installed, the plugin automatically sets up keybindings for markdown files:
 ## Configuration
 
 ```lua
-require('markdown-indent').setup({
+require('markdown_indent').setup({
   -- Keymaps (set to false to disable default keymaps)
   keymaps = {
     indent = "<Tab>",     -- Key to indent headers
@@ -77,7 +77,7 @@ require('markdown-indent').setup({
 You can also call the functions directly:
 
 ```lua
-local markdown_indent = require('markdown-indent')
+local markdown_indent = require('markdown_indent')
 
 -- Indent current header
 markdown_indent.indent()
